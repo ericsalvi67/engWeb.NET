@@ -1,0 +1,20 @@
+﻿@using WebASPNET.Models;
+@model AboutViewModel;
+
+@{
+    ViewData["Title"] = "About Page";
+}
+
+
+<div style="border: 1px solid black; width: 100%; height: auto">
+
+    <h1 class="display-4">About</h1> 
+        <p>
+            @Model.Nome<br>
+            @Model.Idade<br>
+            @Model.DataNascimento<br>
+            @Model.Description<br>
+        </p>
+
+</div>
+

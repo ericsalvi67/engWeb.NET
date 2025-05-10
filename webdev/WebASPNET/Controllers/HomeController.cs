@@ -35,6 +35,20 @@ namespace WebASPNET.Controllers
             return View(pessoasQueVaoParaTela);
         }
 
+        public IActionResult About()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            var modeloParaTela = new AboutViewModel();
+            modeloParaTela.Nome = "Nome do usuário";
+            modeloParaTela.Idade = 30;
+            modeloParaTela.DataNascimento = DateTime.Now.AddYears(-modeloParaTela.Idade);
+            modeloParaTela.Description = "Adipisicing adipisicing et excepteur irure laborum laboris irure reprehenderit cupidatat id amet ex. Duis ipsum consectetur et proident adipisicing consectetur sint nostrud aliquip eiusmod ut et laboris. Velit amet excepteur officia culpa nostrud minim. Exercitation et duis et laboris.";
+
+
+            return View(modeloParaTela);
+        }
+
         public IActionResult Privacy()
         {
             return View();
