@@ -1,0 +1,33 @@
+﻿@using WebASPNET.Models;
+@model List<PessoaModel>;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@if (DateTime.Now.Minute != 1)
+{
+    <div style="border: 1px solid red; width: 100%; height: auto">
+
+        @{ 
+            for (int i = 0; i < Model.Count; i++) 
+            {
+            <div>
+                <span>Id: @Model[i].Id e Nome: @Model[i].Nome </span>
+            </div>
+            }
+        }
+
+    </div>
+}
+else
+{
+    <div style="border: 1px solid blue; width: 100%; height: 200px">
+        MONKEY
+    </div>
+}
